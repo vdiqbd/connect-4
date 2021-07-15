@@ -10,7 +10,7 @@ board = [
 # --------------------------------------------------------------------------------------------------------------------------------
 def drawBoard():
     for index, space in enumerate(board):
-        if (index + 1) % 7 != 0:
+        if (index + 1) % 7 != 0: 
             print(f'{space} |', end = ' ')
         else:
             print(space)
@@ -74,37 +74,22 @@ def checkRows(bo, le):
             (bo[1] == le and bo[2] == le and bo[3] == le and bo[4] == le) or
             (bo[2] == le and bo[3] == le and bo[4] == le and bo[5] == le) or
             (bo[3] == le and bo[4] == le and bo[5] == le and bo[6] == le) or
-            (bo[4] == le and bo[5] == le and bo[6] == le and bo[7] == le) or
-            (bo[5] == le and bo[6] == le and bo[7] == le and bo[8] == le) or
-            (bo[6] == le and bo[7] == le and bo[8] == le and bo[9] == le) or
             (bo[7] == le and bo[8] == le and bo[9] == le and bo[10] == le) or
             (bo[8] == le and bo[9] == le and bo[10] == le and bo[11] == le) or
             (bo[9] == le and bo[10] == le and bo[11] == le and bo[12] == le) or
             (bo[10] == le and bo[11] == le and bo[12] == le and bo[13] == le) or
-            (bo[11] == le and bo[12] == le and bo[13] == le and bo[14] == le) or
-            (bo[12] == le and bo[13] == le and bo[14] == le and bo[15] == le) or
-            (bo[13] == le and bo[14] == le and bo[15] == le and bo[16] == le) or
             (bo[14] == le and bo[15] == le and bo[16] == le and bo[17] == le) or
             (bo[15] == le and bo[16] == le and bo[17] == le and bo[18] == le) or
             (bo[16] == le and bo[17] == le and bo[18] == le and bo[19] == le) or
             (bo[17] == le and bo[18] == le and bo[19] == le and bo[20] == le) or
-            (bo[18] == le and bo[19] == le and bo[20] == le and bo[21] == le) or
-            (bo[19] == le and bo[20] == le and bo[21] == le and bo[22] == le) or
-            (bo[20] == le and bo[21] == le and bo[22] == le and bo[23] == le) or
             (bo[21] == le and bo[22] == le and bo[23] == le and bo[24] == le) or
             (bo[22] == le and bo[23] == le and bo[24] == le and bo[25] == le) or
             (bo[23] == le and bo[24] == le and bo[25] == le and bo[26] == le) or
             (bo[24] == le and bo[25] == le and bo[26] == le and bo[27] == le) or
-            (bo[25] == le and bo[26] == le and bo[27] == le and bo[28] == le) or
-            (bo[26] == le and bo[27] == le and bo[28] == le and bo[29] == le) or
-            (bo[27] == le and bo[28] == le and bo[29] == le and bo[30] == le) or
             (bo[28] == le and bo[29] == le and bo[30] == le and bo[31] == le) or
             (bo[29] == le and bo[30] == le and bo[31] == le and bo[32] == le) or
             (bo[30] == le and bo[31] == le and bo[32] == le and bo[33] == le) or
             (bo[31] == le and bo[32] == le and bo[33] == le and bo[34] == le) or
-            (bo[32] == le and bo[33] == le and bo[34] == le and bo[35] == le) or
-            (bo[33] == le and bo[34] == le and bo[35] == le and bo[36] == le) or
-            (bo[34] == le and bo[35] == le and bo[36] == le and bo[37] == le) or
             (bo[35] == le and bo[36] == le and bo[37] == le and bo[38] == le) or
             (bo[36] == le and bo[37] == le and bo[38] == le and bo[39] == le) or
             (bo[37] == le and bo[38] == le and bo[39] == le and bo[40] == le) or
@@ -177,7 +162,7 @@ def main():
                     bottom = move + 35
                     if player == 1:
                         playerOneMove(board, bottom, move)
-                        if checkRows(board, 'X') or checkColumns(board, 'X') or checkDiagonals(board, "X"):
+                        if checkRows(board, 'X') or checkColumns(board, 'X') or checkDiagonals(board, 'X'):
                             print(f'Player {player} has won.')
                             break
                         else:
